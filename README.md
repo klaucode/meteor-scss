@@ -1,16 +1,13 @@
 # Sass for Meteor
-This is a Sass build plugin for Meteor. It compiles Sass files with node-sass.
-
-**Note that due to a limitation in libsass, there is no support for imports with indented syntax (sass). Indented syntax does work on the top-level. A version based on dart-sass is in the works which should remove this limitation.**
-
-**Meteor 1.7 introduced a change in how node_modules are handled, if you want to import sass from a node_module you need to symlink the package in your imports directory (more information below)**
+This is a Sass build plugin for Meteor. It compiles Sass files with sass.
+**Fork from nodeseven:scss to add support for dart-sass.**
 
 ## Installation
 
 Install using Meteor's package management system:
 
 ```bash
-> meteor add fourseven:scss
+> meteor add klaucode:scss
 ```
 
 If you want to use it for your package, add it in your package control file's
@@ -19,7 +16,7 @@ If you want to use it for your package, add it in your package control file's
 ```javascript
 Package.onUse(function (api) {
   ...
-  api.use('fourseven:scss');
+  api.use('klaucode:scss');
   ...
 });
 ```
@@ -27,19 +24,14 @@ Package.onUse(function (api) {
 ## Compatibility
 <table>
 <thead>
-<tr><th>Meteor Version</th><th>Recommended fourseven:scss version</th></tr>
+<tr><th>Meteor Version</th><th>Recommended klaucode:scss version</th></tr>
 </thead>
 <tbody>
-<tr><td>1.0 - 1.1</td><td>3.2.0</td></tr>
-<tr><td>1.2 - 1.3.1</td><td>3.4.2</td></tr>
-<tr><td>1.3.2+</td><td>3.8.0_1</td></tr>
-<tr><td>1.4.0</td><td>3.8.1</td></tr>
-<tr><td>1.4.1+</td><td>4.5.4</td></tr>
-<tr><td>1.6+</td><td>4.12.0</td></tr>
+<tr><td>2.13</td><td>5.0.0</td></tr>
 </tbody>
 </table>
 
-Since `meteor 1.4.1+` (`fourseven:scss 3.9.0+`), we do not have prebuild binaries anymore. You are required to set up the [required toolchain](https://github.com/nodejs/node-gyp) yourselves.
+Fore previous meteor versions, you can use `fourseven:scss` package.
 
 ## Usage
 Without any additional configuration after installation, this package automatically finds all `.scss` and `.sass` files in your project, compiles them with [node-sass](https://github.com/sass/node-sass), and includes the resulting CSS in the application bundle that Meteor sends to the client. The files can be anywhere in your project.
@@ -150,7 +142,5 @@ meteor remove standard-minifier-css
 meteor add seba:minifiers-autoprefixer
 ```
 
-## LibSass vs Ruby Sass
-Please note that this project uses [LibSass](https://github.com/hcatlin/libsass). LibSass is a C++ implementation of the Ruby Sass compiler. It has most of the features of the Ruby version, but not all of them. Things are improving, so please be patient. Before you ask, I have no intention of making a version of this package that links to the Ruby version instead.
-
-For a quick rundown on what libsass does and doesn't (currently) do, [check here](http://sass-compatibility.github.io/).
+## Dart Sass
+Please note that this project uses [Dart-Sass](https://www.npmjs.com/package/sass).
