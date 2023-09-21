@@ -7,7 +7,7 @@ This is a Sass build plugin for Meteor. It compiles Sass files with sass.
 Install using Meteor's package management system:
 
 ```bash
-> meteor add klaucode:scss
+> meteor add nodsec:scss
 ```
 
 If you want to use it for your package, add it in your package control file's
@@ -16,7 +16,7 @@ If you want to use it for your package, add it in your package control file's
 ```javascript
 Package.onUse(function (api) {
   ...
-  api.use('klaucode:scss');
+  api.use('nodsec:scss');
   ...
 });
 ```
@@ -24,7 +24,7 @@ Package.onUse(function (api) {
 ## Compatibility
 <table>
 <thead>
-<tr><th>Meteor Version</th><th>Recommended klaucode:scss version</th></tr>
+<tr><th>Meteor Version</th><th>Recommended nodsec:scss version</th></tr>
 </thead>
 <tbody>
 <tr><td>2.13</td><td>5.0.0</td></tr>

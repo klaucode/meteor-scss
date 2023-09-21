@@ -1,8 +1,8 @@
 Package.describe({
   summary: "Style with attitude. Sass and SCSS support for Meteor.js.",
   version: "5.0.0",
-  git: "https://github.com/klaucode/meteor-scss.git",
-  name: "klaucode:scss",
+  git: "https://github.com/nodsec/meteor-scss.git",
+  name: "nodsec:scss",
 });
 
 Package.registerBuildPlugin({
@@ -22,7 +22,7 @@ Package.onUse((api) => {
 Package.onTest((api) => {
   api.use(["test-helpers", "tinytest"]);
 
-  api.use(["klaucode:scss"]);
+  api.use(["nodsec:scss"]);
 
   // Tests for .scss
   api.addFiles([
