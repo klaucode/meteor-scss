@@ -269,7 +269,7 @@ class SassCompiler extends MultiFileCachingCompiler {
       output = await compileSass(ffile, options);
     } catch (e) {
       inputFile.error({
-        message: `Scss compiler error: ${e.formatted}\n`,
+        message: `Scss compiler error: ${e}\n`,
         sourcePath: inputFile.getDisplayPath(),
       });
       return null;

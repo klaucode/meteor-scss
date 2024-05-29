@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Style with attitude. Sass and SCSS support for Meteor.js.",
-  version: "5.0.0",
+  version: "5.0.1",
   git: "https://github.com/nodsec/meteor-scss.git",
   name: "nodsec:scss",
 });
@@ -10,7 +10,7 @@ Package.registerBuildPlugin({
   use: ["caching-compiler@1.2.2", "ecmascript@0.15.1"],
   sources: ["plugin/compile-scss.js"],
   npmDependencies: {
-    sass: "1.49.9",
+    sass: "1.77.2",
   },
 });
 
