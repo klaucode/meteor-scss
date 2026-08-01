@@ -4,4 +4,7 @@
 meteor/
 .build*
 .idea
-.npm
+
+# Keep .npm/plugin/*/npm-shrinkwrap.json under version control (Meteor uses it to
+# pin the build plugin's npm deps); only the installed modules are ignored.
+.npm/**/node_modules
